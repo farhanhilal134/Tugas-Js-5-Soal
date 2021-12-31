@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body style="background-color: rgb(205, 228, 204);color:rgb(7, 7, 7); text-align: center;">
+	<br><br><br>
+    <h3>Kurs Rupiah mata Uang</h3>
+		<table border="2" style="width: 100%">
+			<tr>
+				<td style="color: red;"> Ketik Jumlah</td>
+				<td style="color: red;">Pilih Mata Uang</td>
+				<td style="color: red;">Hasil Rupiahnya</td>
+			</tr>
+			<tr>
+				<td><input onkeyup="kurs()" style="width: 90%" placeholder="Insert Amount" type="text" name="nilai" id="nilai"></td>
+				<td>
+				<select onchange="kurs()" id="kurs" style="width: 90%" >
+					<option value="0">Choose</option>
+					<option value="1">Dollar US</option>
+					<option value="2">Ruble</option>
+					<option value="3">Ringgit</option>
+					<option value="4">Real</option>
+					<option value="5">Dinar Kuwait</option>
+				</select></td>
+				<td><input type="text" disabled="" id="rupiah" placeholder="Total in Rupiah" style="width: 90%" name="rupiah"></td>
+			</tr>
+		</table>
+	
+</body>
+<script type="text/javascript">
+	function kurs() {
+
+		k = document.getElementById("kurs").value;
+
+		if (k == 1) {
+			input = document.getElementById("nilai").value;
+			nilai = 14650
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		}else if (k == 2) {
+			input = document.getElementById("nilai").value;
+			nilai = 185 ;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		}else if (k == 3) {
+			input = document.getElementById("nilai").value;
+			nilai = 3465;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		}else if (k == 4) {
+			input = document.getElementById("nilai").value;
+			nilai = 3782;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		}else if (k == 5) {
+			input = document.getElementById("nilai").value;
+			nilai = 46400;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = hitung;
+		}
+	}
+</script>
+</html>

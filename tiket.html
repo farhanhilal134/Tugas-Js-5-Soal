@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 5</title>
+    <style>
+        span {
+            visibility: hidden;
+            color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="nama" placeholder="Masukkan Nama" maxlength="30" minlength="3">
+    <span>*nama tidak boleh kosong</span>
+    <br>
+    <input type="email" id="email" placeholder="Masukkan Email">
+    <span>*email tidak boleh kosong</span>
+    <br>
+    <input type="time" id="waktu" placeholder="Masukkan Waktu">
+    <span>*jam keberangkatan tidak boleh kosong</span>
+    <br>
+    <input type="text" id="tujuan" placeholder="Masukkan Tujuan">
+    <span>*jujuan keberangkatan tidak boleh kosong</span>
+    <br>
+    <input type="number" id="jumlah" placeholder="Masukkan Jumlah">
+    <span>*jumlah tiket tidak boleh kosong</span>
+    <br>
+
+    <button onclick="validasi()">Submit</button>
+    <div id="hasil"></div>
+
+    <script>
+        let nama = document.getElementById("nama")
+        let email = document.getElementById("email")
+        let waktu = document.getElementById("waktu")
+        let tujuan = document.getElementById("tujuan")
+        let jumlah = document.getElementById("jumlah")
+        let span = document.getElementsByTagName("span")
+        let hasil = document.getElementById("hasil")
+        function validasi() {
+            if (nama.value == "" || nama.value.length >= 30) {
+                span[0].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += nama.value + "<br>"
+            }
+            if (email.value == "" || email.value.length >= 30) {
+                span[1].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += email.value + "<br>"
+            }
+            if (waktu.value == "" || waktu.value.length >= 30) {
+                span[2].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += waktu.value + "<br>"
+            }
+            if (tujuan.value == "" || tujuan.value.length >= 30) {
+                span[3].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += tujuan.value + "<br>"
+            }
+            if (jumlah.value == "" || jumlah.value.length >= 30) {
+                span[4].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += jumlah.value + "<br>"
+            }
+        }
+    </script>
+</body>
+</html>

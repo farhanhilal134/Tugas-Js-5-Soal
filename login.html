@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="login.js"></script>
+</head>
+<style>
+    h1{
+        font-size: 22px;
+    }
+    body{
+        background: #fff;
+        color: #333;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #box{
+        position: fixed;
+        left: 30%;
+        border-radius: 8px;
+        background: #fff;
+        width: 300px;
+        margin: 15px;
+        padding: 20px 40px;
+        display: block;
+        border: 1px solid #ddd;
+        box-shadow: 2px 2px 2px;
+    }
+    body input{
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px;
+        width: 95%;
+        border: 1px solid #ddd;
+    }
+    body input :focus{
+        border-color: #07acec;
+        outline: none;
+    }
+    body button {
+        background:#07acec ;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+</style>
+<body>
+    <div id="box">
+        <h1>Login Authentication </h1>
+        <form action="#login">
+        <input id="username" type="text" placeholder="username"/><br>
+        <input id="password" type="password" placeholder="password">
+        <br>
+        <button action="submit" onclick="startlog()">Login Start</button>
+        <p id="Akses"></p>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <select onchange="change()" id="satu">
+            <option>Pilih Hewan Yang Kamu Suka</option>
+            <option value="harimau">Harimau</option>
+            <option value="kuda">Kuda</option>
+            <option value="gorila">Gorilla</option>
+            <option value="ayam">Ayam</option>
+            <option value="burung">Burung</option>
+            <option value="kambing">Kambing</option>
+        </select>
+    </div><br>
+        <img src="" alt="" id="dua" width="100px"><br>
+
+<script>
+    function change(){
+        let img = document.getElementById("satu").value
+        let image = document.getElementById("dua")
+        if(img == "harimau"){
+           image.src = "harimau.jpg"
+            alert ("Ini Gambar harimau")
+        }else if(img == "kuda"){
+            image.src = "kuda.jpg"
+            alert ("Ini adalah Gambar Kuda")
+        }else if(img == "gorila"){
+            image.src = "gorila.jpg"
+            alert ("Ini adalah Gambar gorila")
+        }else if(img == "ayam"){
+            image.src = "ayam.jpg"
+            alert ("Ini adalah Gambar ayam")
+        }else if(img == "burung") {
+            image.src = "burung.jpg"
+            alert("Ini adalah Gambar burung")
+        }else if(img == "kambing") {
+            image.src = "kambing.jpg"
+            alert("Ini adalah Gambar kambing")  
+        }  
+    }
+</script>
+
+</body>
+</html>
